@@ -1,0 +1,295 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* navigation bar */
+.navbar {
+    margin-top: 4%;
+    color: rgb(109, 9, 209);
+    font-size: 22px;
+    word-spacing: 20px;
+    font-family: Calibri;
+    margin-left:3%
+    
+
+}
+
+.home{
+    display:flex;
+    
+}
+
+
+/* home :- Hi I am*/
+#t1 {
+    letter-spacing: 10px;
+    font-size: 70px;
+    color: rgb(30, 174, 30);
+     
+}
+
+/* home :- Pritha Kundu */
+#t2 {
+    font-size: 170px;
+    color: rgb(8, 125, 71);
+    word-spacing: 10px;
+}
+
+/* home :-  small paragraph */
+#t3 {
+    font-size:50px;
+    color: rgb(200, 200, 200);
+}
+
+/* home :- social-icons */
+
+.social-icons {
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+    margin-left:20px
+    
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: rgb(37, 103, 57);
+    background: #7b8975;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #07273e;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5);
+}
+
+/* about :- about name */
+#a1 {
+    color: #2ad117;
+    font-size: 50px;   /* 1000px is WAY too large */
+    text-align: center;
+}
+
+/* about :- about paragraph */
+#a2 {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* projects :- projects name */
+.p1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 70px;
+    color: white;
+    letter-spacing: 5px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(8, 211, 130, 0.6);
+    transition: 0.3s;
+    margin-top:70px;
+}
+
+.p1:hover {
+    color: rgba(8, 211, 130, 0.6);
+    transform: scale(1.05);
+}
+
+/* projects :- project card */
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+    width: 25%;
+    height:25%;
+    background-color: #718470;
+    color: white;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 6%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(15, 255, 47, 0.5);
+}
+
+/* Image */
+.project-card img {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 15px;
+}
+
+/* Heading */
+.project-card h3 {
+    color: #4eea3dc8;
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-card h3:hover{
+    color:  rgba(15, 255, 47, 0.5);
+    transform: scale(1.05);
+
+}
+
+/* Paragraph */
+.project-card p {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Button */
+.project-card a {
+    display: inline-block;
+    background-color: #32dc73;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align:center;
+}
+
+.project-card a:hover {
+    background-color: #28b862;
+}
+
+/* ==========================
+   Tech Stack Section
+========================== */
+
+.tech-stack {
+    margin: 80px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.tech-stack h2 {
+    color: white;
+    font-size: 10px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* ==========================
+   Tech Container
+========================== */
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+/* ==========================
+   Skill Badges
+========================== */
+
+.tech-container span {
+    min-width: 180px;
+    padding: 20px 35px;
+    border-radius: 20px;
+    color: white;
+    font-size: 130%;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 50px 120px rgba(10, 1, 1, 0.751);
+
+}
+
+.tech-container span:hover {
+    transform: translateY(-10px) scale(1.08);
+    box-shadow: 0 10px 12px rgba(237, 224, 224, 0.815);
+}
+
+/* ==========================
+   Individual Colors
+========================== */
+
+.html {
+    background: #e34f26;
+    
+}
+
+.css {
+    background: #1572B6;
+}
+
+.js {
+    background: #F7DF1E;
+    color: black;
+}
+
+.figma {
+    background: #944c36;
+}
+
+.canva {
+    background: #00C4CC;
+}
+
+.github {
+    background: #24292E;
+}
+
+.python {
+    background: #3776AB;
+}
+
+.java {
+    background: #f89820;
+}
+
+.c {
+    background: #00599C;
+}
+
+.sql {
+    background: #336791;
+}
+
+.react {
+    background: #61DAFB;
+    color: black;
+}
