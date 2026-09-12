@@ -1,0 +1,347 @@
+
+/* basic */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* navbar */
+
+header {
+    background-color: #111;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    color: rgb(13, 155, 34);
+}
+
+
+/* home */
+
+.home {
+    min-height: 90vh;
+    padding: 80px 10%;
+}
+
+.home h3 {
+    font-size: 25px;
+    margin-top: 100px;
+}
+
+.home h1 {
+    font-size: 50px;
+    margin-top: 15px;
+    color: rgb(13, 155, 34);
+}
+
+.home h2 {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+
+/* profile image */
+
+.home img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: right;
+    margin-top: -100px;
+}
+
+
+/* social icons */
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.social-icons a:hover {
+    color: rgb(13, 155, 34);
+}
+
+
+/* about */
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: rgb(13, 155, 34);
+}
+
+.about p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* skills */
+
+.Skills {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.Skills h3 {
+    font-size: 35px;
+    color: rgb(13, 155, 34);
+    margin-bottom: 30px;
+}
+
+.tech-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tech-container span {
+    border: 1px solid white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.tech-container span:hover {
+    background-color: rgb(13, 155, 34);
+    color: black;
+}
+
+
+/* projects */
+
+.projects {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.projects h6 {
+    font-size: 35px;
+    color: rgb(13, 155, 34);
+    margin-bottom: 40px;
+}
+
+
+/* project cards */
+
+.project-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    min-height: 350px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #111;
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+/* project images */
+
+.project-card img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* project heading */
+
+.project-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* project paragraph */
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* project button */
+
+.project-card a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    background-color:rgb(13, 155, 34);
+}
+
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .home {
+        text-align: center;
+        padding: 50px 5%;
+    }
+
+    .home img {
+        float: none;
+        display: block;
+        width: 250px;
+        height: 250px;
+        margin: 20px auto;
+    }
+
+    .home h3 {
+        margin-top: 20px;
+    }
+
+    .home h1 {
+        font-size: 40px;
+    }
+
+    .home h2 {
+        margin: 20px auto;
+    }
+
+    .social-icons {
+        margin-top: 25px;
+    }
+
+    .project-card {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+
+/* contact */
+
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 35px;
+    color: rgb(13, 155, 34);
+    margin-bottom: 20px;
+}
+
+.contact h4 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+
+/* input fields */
+
+.credentials {
+    font-size: 17px;
+}
+
+input.credentials {
+    width: 250px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #111;
+    color: white;
+}
+
+
+/* input when clicked */
+
+input.credentials:focus {
+    border-color: rgb(13, 155, 34);
+    outline: none;
+}
+
+/* submit button */
+
+button {
+    background-color:rgb(13, 155, 34);
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+}
+
+/* social icons */
+
+.contact .social-icons {
+    margin-top: 30px;
+}
+
+.contact .social-icons a {
+    color: white;
+    font-size: 28px;
+    margin-right: 20px;
+}
+
+.contact .social-icons a:hover {
+    color: rgb(13, 155, 34);
+}
+
+
+
