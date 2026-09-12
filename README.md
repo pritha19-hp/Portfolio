@@ -7,4 +7,4 @@ Hi, I'm Pritha Kundu 👋 I'm a 3rd-year Computer Science Engineering student in
 
 🌐 I recently built my **personal portfolio website** to showcase my skills and projects.
 
-Live link: pritha19-hp.github.io/Portfolio/
+Live link: pritha19-hp.github.io/Portfolio
