@@ -2,19 +2,27 @@ const express = require("express");
 const cors = require("cors");
 const XLSX = require("xlsx");
 const path = require("path");
+const os = require("os");
+const fs = require("fs");
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
+/* ================================
+   ROOT ROUTE
+   Test whether backend is running
+================================ */
 
-/* Excel file location */
+app.get("/", function(req, res) {
+    res.send("Backend API is running!");
+});
 
-const filePath = path.join(__dirname, "..", "contact info.xlsx");
 
-
-/* Receive contact form data */
+/* ================================
+   CONTACT FORM
+================================ */
 
 app.post("/contact", function(req, res) {
 
@@ -34,9 +42,47 @@ app.post("/contact", function(req, res) {
     }
 
 
-    /* Open Excel file */
+    /* ================================
+       EXCEL FILE LOCATION
 
-    let workbook = XLSX.readFile(filePath);
+       Vercel:
+       Use /tmp because the project
+       folder is read-only.
+
+       Local:
+       Use the original Excel location.
+    ================================= */
+
+    const isVercel = process.env.VERCEL === "1";
+
+    const filePath = isVercel
+        ? path.join(os.tmpdir(), "contact_info.xlsx")
+        : path.join(__dirname, "..", "contact info.xlsx");
+
+
+    /* ================================
+       OPEN OR CREATE EXCEL FILE
+    ================================= */
+
+    let workbook;
+
+    if (fs.existsSync(filePath)) {
+
+        workbook = XLSX.readFile(filePath);
+
+    } else {
+
+        workbook = XLSX.utils.book_new();
+
+        const worksheet = XLSX.utils.json_to_sheet([]);
+
+        XLSX.utils.book_append_sheet(
+            workbook,
+            worksheet,
+            "Contacts"
+        );
+
+    }
 
 
     /* Get the first sheet */
@@ -54,16 +100,18 @@ app.post("/contact", function(req, res) {
     /* Add new contact */
 
     data.push({
+
         Name: name,
         Email: email,
-        Message: message
+        Message: message,
+        Date: new Date().toISOString()
+
     });
 
 
-    /* Convert data back to Excel */
+    /* Convert JavaScript data back to Excel */
 
     let newWorksheet = XLSX.utils.json_to_sheet(data);
-
 
     workbook.Sheets[sheetName] = newWorksheet;
 
@@ -73,17 +121,41 @@ app.post("/contact", function(req, res) {
     XLSX.writeFile(workbook, filePath);
 
 
+    /* Send success response */
+
     res.json({
-        message: "Contact information saved successfully!"
+
+        message: "Contact information received successfully!"
+
     });
 
 });
 
 
-/* Start server */
+/* ================================
+   LOCAL SERVER
 
-app.listen(3000, function() {
+   Only runs when testing locally.
+   Vercel does NOT use app.listen().
+================================ */
 
-    console.log("Backend server is running on http://localhost:3000");
+if (process.env.NODE_ENV !== "production") {
 
-});
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, function() {
+
+        console.log(
+            `Backend server is running on http://localhost:${PORT}`
+        );
+
+    });
+
+}
+
+
+/* ================================
+   EXPORT APP FOR VERCEL
+================================ */
+
+module.exports = app;
