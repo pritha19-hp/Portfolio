@@ -146,22 +146,24 @@ system)-Built using Java and Swing GUI </h3>
     <h4>"Have a question, a project idea , or just want to connect?</h4>
     <h4> My inbox is always open to connect!"</h4> 
     <br>
-    <form id="contact-form" >
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="1479fa2b-d8b7-4364-9937-e8cab6f41eb3">
+    
     <label class="credentials">Name:</label>
-    <input id="name" class="credentials"type="text" placeholder="Enter your name">
+    <input id="name" name="name" class="credentials" type="text" placeholder="Enter your name" required>
     <br>
     <br>
     <label class="credentials">Email:</label>
-    <input id="email" class="credentials" type="email" placeholder="Enter your email">
+    <input id="email" name="email" class="credentials" type="email" placeholder="Enter your email" required>
     <br>
     <br>
     <label class="credentials">Message:</label>
-    <textarea id="message" class="credentials" placeholder="Enter your message" style="width: 250px; height: 50px;"></textarea>
+    <textarea id="message" name="message" class="credentials" placeholder="Enter your message" style="width: 250px; height: 50px;" required></textarea>
     <br>
     <br>
-   <button type="submit">Submit</button>
-   <br>
-    </form>
+    <button type="submit">Submit</button>
+    <br>
+</form>
 
      <div class="social-icons">
     <a href="https://github.com/pritha19-hp"><i class="fab fa-github"></i></a>
