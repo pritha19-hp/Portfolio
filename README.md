@@ -1,5 +1,5 @@
 # Portfolio
-Hi, I'm Pritha Kundu 👋 I'm a 3rd-year Computer Science Engineering student interested in **Web Development, UI/UX Design, and Data Analytics**.
+Hi, I'm Pritha Kundu 👋 I'm a 3rd-year Computer Science Engineering student interested in **Full Stack Web Development, UI/UX Design, and Data Analytics**.
 
 💻 Currently learning Java and Full-Stack Development.
 
