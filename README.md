@@ -5,6 +5,8 @@ Hi, I'm Pritha Kundu 👋 I'm a 3rd-year Computer Science Engineering student in
 
 🚀 I enjoy building projects, exploring new technologies, and turning ideas into real-world applications.
 
-🌐 I recently built my **personal portfolio website** to showcase my skills and projects.
+ # Personal Portfolio Website
+🌐 This is my 1st project built as part of the **Full Stack Web Development** program at **Thiranex**.
+
 
 Live link: https://pritha19-hp.github.io/Portfolio/portfolio/Portfolio.html
